@@ -1,5 +1,7 @@
+//Modules
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpModule } from '@angular/http';
 
 //Containers
 import { PassengerDashboardComponent } from './containers/passenger-dashboard/passenger-dashboard.component';
@@ -18,7 +20,8 @@ import { PassengerDashboardService } from './services/passenger-dashboard.servic
     PassengerDetailComponent
   ],
   imports:[
-    CommonModule
+    CommonModule,
+    HttpModule
   ],
   exports: [
     PassengerDashboardComponent
