@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 //Containers
 import { PassengerDashboardComponent } from './containers/passenger-dashboard/passenger-dashboard.component';
@@ -10,6 +11,7 @@ import { PassengerViewerComponent } from './containers/passenger-viewer/passenge
 //Components
 import { PassengerCountComponent } from './components/passenger-count/passenger-count.comonent';
 import { PassengerDetailComponent } from './components/passenger-detail/passenger-detail.component';
+import { PassengerFormComponent } from './components/passenger-form/passenger-form.component';
 
 //Services
 import { PassengerDashboardService } from './services/passenger-dashboard.service';
@@ -19,11 +21,13 @@ import { PassengerDashboardService } from './services/passenger-dashboard.servic
     PassengerDashboardComponent,
     PassengerViewerComponent,
     PassengerCountComponent,
-    PassengerDetailComponent
+    PassengerDetailComponent,
+    PassengerFormComponent
   ],
   imports:[
     CommonModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   exports: [
     PassengerDashboardComponent,

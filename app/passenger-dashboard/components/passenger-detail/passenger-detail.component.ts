@@ -14,7 +14,6 @@ import { Passenger } from "../../models/passenger.interface";
           {{ detail.fullname }}
         </div>
         <div class="date">Check in date: {{ detail.checkedInDate ? (detail.checkedInDate | date: 'y,MMMM dd') : null}} </div>
-        <div class="children">Children: {{ detail.children?.length || 0  }}</div>
         <div>
           <button (click)="toggleEdit()">{{ editing ? 'Done' : 'Edit' }}</button>
           <button (click)="onRemove()">Remove</button>

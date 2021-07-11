@@ -5,42 +5,28 @@
       "fullname": "M. Uzair Aslam",
       "checkedIn": true,
       "checkedInDate": 1490742000000,
-      "children": null
+      "baggage": ""
     },
     {
       "id": 2,
       "fullname": "M. Zunair Aslam",
       "checkedIn": false,
       "checkedInDate": null,
-      "children": [
-        {
-          "name": "FChild",
-          "age": 5
-        },
-        {
-          "name": "SChild",
-          "age": 3
-        }
-      ]
+      "baggage": ""
     },
     {
       "id": 3,
       "fullname": "Bilal Afzal",
       "checkedIn": true,
       "checkedInDate": 1490742230000,
-      "children": [
-        {
-          "name": "Fchile",
-          "age": 10
-        }
-      ]
+      "baggage": ""
     },
     {
       "id": 4,
       "fullname": "Jawad Ali Maken",
       "checkedIn": false,
       "checkedInDate": null,
-      "children": null
+      "baggage": ""
     }
   ]
 }
