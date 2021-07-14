@@ -1,5 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { Passenger } from "../../models/passenger.interface";
+import { Baggage } from "../../models/baggage.interface";
 
 @Component({
   selector: 'passenger-form',
@@ -20,6 +21,13 @@ import { Passenger } from "../../models/passenger.interface";
           <input type="checkbox" [value]="true" name="checkedIn" [ngModel]="detail?.checkedIn" (ngModelChange)="toggleCheckIn($event)">
           Checked In
         </label>
+      </div>
+      <div>
+        <select name="baggage" [ngModel]="detail?.baggage">
+          <option *ngFor="let item of baggages" [value]="item.key" [selected]="item.key === detail?.baggage">{{item.value}}</option>
+        </select>
+      </div>
+      <div>
         <div *ngIf="form.value.checkedIn">
           Checked In Date:
           <input type="number" name="checkedInDate" [ngModel]="detail?.checkedInDate" />
@@ -32,8 +40,24 @@ import { Passenger } from "../../models/passenger.interface";
 export class PassengerFormComponent {
   @Input()
   detail: Passenger;
+
+  baggages: Baggage[] = [{
+    key: 'none',
+    value: 'No Baggage'
+  },{
+    key: 'hand-only',
+    value: 'Hand Baggage'
+  },{
+    key: 'hold-only',
+    value: 'Hold Baggage'
+  },{
+    key: 'hand-hold',
+    value: 'Hand and Hold Baggage'
+  }];
+
   constructor(){
   }
+
   toggleCheckIn(checkedIn: boolean) {
     if(checkedIn){
       this.detail.checkedInDate = Date.now();
