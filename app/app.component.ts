@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
     <div class="app">
       <!-- {{ title }} -->
       <!-- <passenger-dashboard></passenger-dashboard> -->
-      <passenger-viewer></passenger-viewer>
+      <!-- <passenger-viewer></passenger-viewer> -->
+      <a routerLink="/">Home</a>
+      <a routerLink="/oops">404</a>
+      <br>
+      <router-outlet></router-outlet>
     </div>
   `
 })
