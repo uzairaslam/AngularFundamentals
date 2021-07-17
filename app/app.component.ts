@@ -8,9 +8,10 @@ import { Component } from '@angular/core';
       <!-- {{ title }} -->
       <!-- <passenger-dashboard></passenger-dashboard> -->
       <!-- <passenger-viewer></passenger-viewer> -->
-      <a routerLink="/">Home</a>
-      <a routerLink="/oops">404</a>
-      <br>
+      <nav class="nav">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <a routerLink="/oops" routerLinkActive="active">404</a>
+      </nav>
       <router-outlet></router-outlet>
     </div>
   `
